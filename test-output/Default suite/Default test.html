@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 18 06:06:58 BDT 2021</td>
+<td>Started on:</td><td>Mon Nov 22 04:10:30 BDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16386 ms)</td>
+<tr><td>Total time:</td><td>48 seconds (48871 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,13 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.elements.envato.tests.AutomateDownload.downloadGraphicDesignKit()'><b>downloadGraphicDesignKit</b><br>Test class: com.elements.envato.tests.AutomateDownload</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;_7FmbXsdm _16BUMJbO _3D8msGLf _22jsLmso&quot; role=&quot;tooltip&quot; tabindex=&quot;0&quot;&gt;...&lt;/div&gt; is not clickable at point (955, 585). Other element would receive the click: &lt;div class=&quot;ReactModal__Overlay ReactModal__Overlay--after-open _37p1AAh3&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=96.0.4664.45)
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-CHKGKOF&apos;, ip: &apos;192.168.137.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 18360, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
-*** Element info: {Using=xpath, value=//li[@class=&apos;_2zvdzcaV _3VFL4QU3&apos;][2]//div[@class=&apos;_2FqP5dkb&apos;]//div[@class=&apos;_7FmbXsdm _16BUMJbO _3D8msGLf _22jsLmso&apos;]}
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55550}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc4cb49073a420b1ae03e01474b96362
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -93,12 +93,10 @@ Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at pages.com.elements.envato.EnvatoDownloadGraphgicDesign.ClickDownloadIcon(EnvatoDownloadGraphgicDesign.java:22)
-	at com.elements.envato.tests.AutomateDownload.downloadGraphicDesignKit(AutomateDownload.java:75)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at pages.com.elements.envato.EnvatoDownloadGraphgicDesign.ClickDownloadIcon(EnvatoDownloadGraphgicDesign.java:23)
+	at com.elements.envato.tests.AutomateDownload.downloadGraphicDesignKit(AutomateDownload.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -124,14 +122,14 @@ Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace282003944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace282003944'><pre>org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+</pre></div><a href='#' onClick='toggleBox("stack-trace71802912", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace71802912'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;_7FmbXsdm _16BUMJbO _3D8msGLf _22jsLmso&quot; role=&quot;tooltip&quot; tabindex=&quot;0&quot;&gt;...&lt;/div&gt; is not clickable at point (955, 585). Other element would receive the click: &lt;div class=&quot;ReactModal__Overlay ReactModal__Overlay--after-open _37p1AAh3&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=96.0.4664.45)
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-CHKGKOF&apos;, ip: &apos;192.168.137.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_261&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211103134640, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 18360, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
-*** Element info: {Using=xpath, value=//li[@class=&apos;_2zvdzcaV _3VFL4QU3&apos;][2]//div[@class=&apos;_2FqP5dkb&apos;]//div[@class=&apos;_7FmbXsdm _16BUMJbO _3D8msGLf _22jsLmso&apos;]}
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55550}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc4cb49073a420b1ae03e01474b96362
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -142,12 +140,10 @@ Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at pages.com.elements.envato.EnvatoDownloadGraphgicDesign.ClickDownloadIcon(EnvatoDownloadGraphgicDesign.java:22)
-	at com.elements.envato.tests.AutomateDownload.downloadGraphicDesignKit(AutomateDownload.java:75)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at pages.com.elements.envato.EnvatoDownloadGraphgicDesign.ClickDownloadIcon(EnvatoDownloadGraphgicDesign.java:23)
+	at com.elements.envato.tests.AutomateDownload.downloadGraphicDesignKit(AutomateDownload.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -174,8 +170,8 @@ Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>9</td>
-<td>com.elements.envato.tests.AutomateDownload@30c8681</td></tr>
+<td>41</td>
+<td>com.elements.envato.tests.AutomateDownload@6d026701</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -188,7 +184,7 @@ Session ID: 5ebdaa67-55c1-48be-9a37-56cfb6fe53d5
 <td title='com.elements.envato.tests.AutomateDownload.signInToWebPage()'><b>signInToWebPage</b><br>Test class: com.elements.envato.tests.AutomateDownload</td>
 <td></td>
 <td>3</td>
-<td>com.elements.envato.tests.AutomateDownload@30c8681</td></tr>
+<td>com.elements.envato.tests.AutomateDownload@6d026701</td></tr>
 </table><p>
 </body>
 </html>

@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,25 +22,39 @@ import pages.com.elements.envato.EnvatoSignInPage;
 
 public class AutomateDownload {
 	String downloadFilepath = "/Users/User/Downloads/Envato/";
+	//String downloadFilepath = "C:\\Users\\User\\Downloads\\Envato";
+	
+//	FirefoxProfile firefoxProfile = new FirefoxProfile();
+//	public FirefoxProfile getFirefoxProfile() {
+//		firefoxProfile.setPreference("browser.download.folderList",2);
+//		firefoxProfile.setPreference("browser.download.manager.showWhenStarting",false);
+//		firefoxProfile.setPreference("profile.default_content_settings.popups", 0);
+//		firefoxProfile.setPreference("browser.download.dir",downloadFilepath);
+//		firefoxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk",
+//	"text/csv,application/x-msexcel,application/excel,application/x-excel,application/vnd.ms-excel,image/png,image/jpeg,text/html,text/plain,application/msword,application/xml");
+//		return firefoxProfile;
+//	}
+	
 
-    HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-    public HashMap<String, Object> getChromePrefs() {
-    	chromePrefs.put("profile.default_content_settings.popups", 0);
-        chromePrefs.put("download.default_directory", downloadFilepath);
+	HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+	public HashMap<String, Object> getChromePrefs() {
+		chromePrefs.put("profile.default_content_settings.popups", 0);
+		chromePrefs.put("download.default_directory", downloadFilepath);
 		return chromePrefs;
 	}
-   
-    ChromeOptions options = new ChromeOptions();
-    public ChromeOptions getOptions() {
-    	options.setExperimentalOption("prefs", chromePrefs);
-	       options.addArguments("--test-type");
-	       options.addArguments("--disable-extensions"); //to disable browser extension popup
-	       options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+
+	ChromeOptions options = new ChromeOptions();
+	public ChromeOptions getOptions() {
+		options.setExperimentalOption("prefs", chromePrefs);
+		options.addArguments("--test-type");
+		options.addArguments("--disable-extensions"); //to disable browser extension popup
+		options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		return options;
 	};
 	WebDriver driver = new ChromeDriver(options);
+	//WebDriver driver = new FirefoxDriver();
 	WebDriverWait wait = new WebDriverWait(driver,2);
-	  
+
 
 	EnvatoSignInPage signIn = new EnvatoSignInPage(driver);
 	EnvatoDownloadGraphgicDesign graphicDesign = new EnvatoDownloadGraphgicDesign(driver);
@@ -53,7 +69,7 @@ public class AutomateDownload {
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+
 	}
 
 	@Test(priority = 1)
