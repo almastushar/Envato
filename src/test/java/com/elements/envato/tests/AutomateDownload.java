@@ -1,10 +1,12 @@
 package com.elements.envato.tests;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -45,6 +47,16 @@ public class AutomateDownload {
 
 	ChromeOptions options = new ChromeOptions();
 	public ChromeOptions getOptions() {
+//		options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+//		options.setExperimentalOption("detach", true);
+//		options.addArguments("user-data-dir=c:\\Users\\{username}\\AppData\\Local\\Google\\Chrome\\User Data\\");
+//		options.addArguments("--disable-blink-features=AutomationControlled");
+//		options.addArguments("start-maximized");
+//		options.addArguments("--disable-web-security");
+//		options.addArguments("--user-data-dir");
+//		options.addArguments("start-maximized");
+//        options.setExperimentalOption("useAutomationExtension", false);
+//        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 		options.setExperimentalOption("prefs", chromePrefs);
 		options.addArguments("--test-type");
 		options.addArguments("--disable-extensions"); //to disable browser extension popup
@@ -61,8 +73,10 @@ public class AutomateDownload {
 
 	String baseUrl = "https://elements.envato.com/sign-in";
 	String page31 = "https://elements.envato.com/graphic-templates/ux-and-ui-kits/pg-31";
-	String userName = "almas1993";
-	String password = "Afia@2006";
+	String userName = "";
+	String password = "";
+	String googleEmail = "";
+	String googleEmailPassword = "";
 
 	@BeforeClass
 	public void BeforeTest() throws IOException	{
@@ -76,9 +90,15 @@ public class AutomateDownload {
 	public void signInToWebPage() throws InterruptedException {
 		//wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@id='signInUsername']"))));
 		//Thread.sleep(10000);
-		signIn.EnterUserName(userName);
-		signIn.EnterPassword(password);
-		signIn.ClickSignInBtn();
+		/*
+		 * signIn.EnterUserName(userName); signIn.EnterPassword(password);
+		 * signIn.ClickSignInBtn();
+		 */
+		signIn.ClickGoogleSignInBtn();
+		signIn.EnterGoogleEmail(googleEmail);
+		signIn.ClickGoogleEmailNextBtn();
+		signIn.EnterGoogleEmailPassword(googleEmailPassword);
+		signIn.ClickGoogleEmailNextBtn();
 		Thread.sleep(3000);
 	}
 

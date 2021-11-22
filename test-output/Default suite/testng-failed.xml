@@ -6,6 +6,7 @@
       <class name="com.elements.envato.tests.AutomateDownload">
         <methods>
           <include name="downloadGraphicDesignKit"/>
+          <include name="signInToWebPage"/>
           <include name="BeforeTest"/>
         </methods>
       </class> <!-- com.elements.envato.tests.AutomateDownload -->
